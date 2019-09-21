@@ -1,6 +1,7 @@
 .activeCard {
-  color: red;
-  background: pink;
+  color: rgb(0, 255, 0);
+  background: rgb(255, 0, 170);
+  text-align: center;
  }
 .card {
   display: inline-block;

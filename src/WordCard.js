@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CharacterCard from './CharacterCard';
 import _ from 'lodash'; 
+import './App.css';
 
 
 const prepareStateFromWord = (given_word) => {
@@ -56,15 +57,15 @@ render() {
  return (
 
  <div>
-     <p>ROUND : {this.state.attempt}/3  </p>      
-     <p>YOUR WORD : {this.state.text}  </p>  
+     <p className = "App">ROUND : {this.state.attempt}/3  </p>      
+     <p className = "App">YOUR WORD : {this.state.text}  </p>  
       
 { Array.from(this.state.chars).map((c, i) => 
 <CharacterCard value={c} key={i} 
 activationHandler={this.activationHandler}
 attempt = {this.state.attempt}/>)}
-<p>{this.state.completed? "YOU WIN!":""}</p> 
-<p>{this.state.uncompleted? "YOU LOST!":""}</p> 
+<p className = "App">{this.state.completed? "YOU WIN!":""}</p> 
+<p className = "App">{this.state.uncompleted&&!this.state.completed? "YOU LOST!":""}</p> 
 
 
 
