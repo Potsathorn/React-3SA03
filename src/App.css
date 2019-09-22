@@ -20,7 +20,9 @@
 .App-logo {
   height: 40vmin;
 }
-
+.Logo {
+  background-image: url(./pic.jpg);
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

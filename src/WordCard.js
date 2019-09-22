@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CharacterCard from './CharacterCard';
 import _ from 'lodash'; 
 import './App.css';
-
+import logo from './pic.jpg';
 
 const prepareStateFromWord = (given_word) => {
  let word = given_word.toUpperCase()
@@ -57,6 +57,7 @@ render() {
  return (
 
  <div>
+     <img src={logo} alt="Logo" />;
      <p className = "App">Create by: Potsathorn Duangkaewjaroen 6010110237 section 01</p> 
      <p className = "App">ROUND : {this.state.attempt}/3  </p>      
      <p className = "App">YOUR WORD : {this.state.text}  </p>  
