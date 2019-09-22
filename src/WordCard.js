@@ -36,7 +36,7 @@ export default class WordCard extends Component {
 
         if(guess.length == this.state.chars.length&&this.state.attempt<=3){
             if(this.state.attempt >2){
-                this.setState({uncompleted: true})
+                this.setState({uncompleted: true,score: this.state.score - 1})
             }
             this.setState({text: [this.state.guess]})
             if(guess == this.state.word){
@@ -68,8 +68,9 @@ render() {
 activationHandler={this.activationHandler}
 attempt = {this.state.attempt}/>)}
 <p className = "App">{this.state.completed? "YOU WIN!":""}</p> 
-<p className = "App">{this.state.completed? "YOU SCORE :"+this.state.score:""}</p> 
+<p className = "App">{this.state.completed? "YOUR SCORE :"+this.state.score:""}</p> 
 <p className = "App">{this.state.uncompleted&&!this.state.completed? "YOU LOST!":""}</p> 
+<p className = "App">{this.state.uncompleted&&!this.state.completed? "YOUR SCORE :"+this.state.score:""}</p> 
 
 
 
