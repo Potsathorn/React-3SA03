@@ -58,6 +58,7 @@ render() {
  return (
 
  <div>
+     <p className = "App">=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+</p> 
      <img src={logo} alt="Logo" />;
      <p className = "App">Create by: Potsathorn Duangkaewjaroen 6010110237 section 01</p> 
      <p className = "App">ROUND : {this.state.attempt}/3  </p>      
@@ -71,11 +72,7 @@ attempt = {this.state.attempt}/>)}
 <p className = "App">{this.state.completed? "YOUR SCORE :"+this.state.score:""}</p> 
 <p className = "App">{this.state.uncompleted&&!this.state.completed? "YOU LOST!":""}</p> 
 <p className = "App">{this.state.uncompleted&&!this.state.completed? "YOUR SCORE :"+this.state.score:""}</p> 
-
-
-
-
-
+<p className = "App">=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+</p> 
 
  </div>
  );
