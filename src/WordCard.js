@@ -11,6 +11,7 @@ const prepareStateFromWord = (given_word) => {
  word,
  chars,
  attempt: 1,
+ score: 0,
  guess: [],
  text: [],
  completed: false,
@@ -39,7 +40,7 @@ export default class WordCard extends Component {
             }
             this.setState({text: [this.state.guess]})
             if(guess == this.state.word){
-                this.setState({guess: [],text: [this.state.guess] + c, completed: true})
+                this.setState({guess: [],text: [this.state.guess] + c, completed: true,score: this.state.score + 1})
                 }
             else{
                 
@@ -67,6 +68,7 @@ render() {
 activationHandler={this.activationHandler}
 attempt = {this.state.attempt}/>)}
 <p className = "App">{this.state.completed? "YOU WIN!":""}</p> 
+<p className = "App">{this.state.completed? "YOU SCORE :"+this.state.score:""}</p> 
 <p className = "App">{this.state.uncompleted&&!this.state.completed? "YOU LOST!":""}</p> 
 
 
