@@ -4,6 +4,14 @@ import _ from 'lodash';
 import './App.css';
 import logo from './pic.jpg';
 
+var bgColors = { "Default": "#81b71a",
+                    "Blue": "#00B1E1",
+                    "Cyan": "#37BC9B",
+                    "Green": "#8CC152",
+                    "Red": "#E9573F",
+                    "Yellow": "#F6BB42",
+}
+
 const prepareStateFromWord = (given_word) => {
  let word = given_word.toUpperCase()
  let chars = _.shuffle(Array.from(word))
@@ -58,8 +66,9 @@ render() {
  return (
 
  <div>
+     <a style={{backgroundColor: bgColors.Yellow}}>GAME LOGIC Version 2</a>
      <p className = "App">=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+</p> 
-     <img src={logo} alt="Logo" />;
+     <img src={logo} alt="Logo" />
      <p className = "App">Create by: Potsathorn Duangkaewjaroen 6010110237 section 01</p> 
      <p className = "App">ROUND : {this.state.attempt}/3  </p>      
      <p className = "App">YOUR WORD : {this.state.text}  </p>  
