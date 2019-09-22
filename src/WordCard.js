@@ -57,6 +57,7 @@ render() {
  return (
 
  <div>
+     <p className = "App">Create by: Potsathorn Duangkaewjaroen 6010110237 section 01</p> 
      <p className = "App">ROUND : {this.state.attempt}/3  </p>      
      <p className = "App">YOUR WORD : {this.state.text}  </p>  
       
